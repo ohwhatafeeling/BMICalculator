@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Main {
@@ -12,7 +13,9 @@ public class Main {
 		double height = scanner.nextDouble();
 		double result = calculator.calculateBmi(weight, height);
 		
-		System.out.println("Your BMI is " + result);
+		DecimalFormat numberFormat = new DecimalFormat("#.00");
+		
+		System.out.println("Your BMI is " + numberFormat.format(result));
 	}
 
 }
